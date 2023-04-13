@@ -20,14 +20,25 @@ npm install --global yarn
 yarn --exact
 ```
 
-### TEST HARDHAT NODE
+### UPDATE .env
+
+```shell
+yarn --exact
+```
+
+```env
+PROVIDER_URL=http://127.0.0.1:8545
+SIMULATION_PORT=8700
+```
+
+### FORK MAINNET NODE
+
+```shell
+npx hardhat run scripts/fork.ts
+```
+
+or run the following if you want to see addresses etc.
 
 ```shell
 npx hardhat node --port 8700
-```
-
-### TEST SERVICE
-
-```shell
-ts-node main.ts
 ```
