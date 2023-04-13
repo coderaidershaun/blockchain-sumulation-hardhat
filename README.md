@@ -1,13 +1,33 @@
-# Sample Hardhat Project
+### UPGRADE NODE
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
-
-Try running some of the following tasks:
+Ensure latest version of node
 
 ```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
+sudo npm cache clean -f
+sudo npm install -g n
+sudo n stable
+```
+
+Install yarn
+
+```shell
+npm install --global yarn
+```
+
+### INSTALL PACKAGES
+
+```shell
+yarn --exact
+```
+
+### TEST HARDHAT NODE
+
+```shell
+npx hardhat node --port 8700
+```
+
+### TEST SERVICE
+
+```shell
+ts-node main.ts
 ```
