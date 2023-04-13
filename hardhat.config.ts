@@ -8,6 +8,9 @@ dotenv.config();
  * This is because GETH is already listening on 8545
  */
 
+// Exract Provider
+const PROVIDER = process.env.PROVIDER_URL!;
+
 const config: HardhatUserConfig = {
   solidity: {
     version: "0.8.18", // Replace with your desired Solidity compiler version
@@ -16,7 +19,7 @@ const config: HardhatUserConfig = {
   networks: {
     hardhat: {
       forking: {
-        url: process.env.PROVIDER_URL!,
+        url: PROVIDER,
       },
     },
   },
