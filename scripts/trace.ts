@@ -2,6 +2,8 @@ import { ethers } from "hardhat";
 import dotenv from "dotenv";
 dotenv.config();
 
+// curl -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"debug_traceTransaction","params":["0x07a37dd999ab9791bcb0ff04fa3b29cd22487fa2a51a773e17e2ffbfef889505"],"id":1}' http://localhost:8545
+
 // Extract Provider
 const PROVIDER_SIM = "http://127.0.0.1:" + process.env.SIMULATION_PORT!;
 
