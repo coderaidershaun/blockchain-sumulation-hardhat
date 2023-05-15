@@ -2,8 +2,14 @@ import { ethers } from "hardhat";
 import dotenv from "dotenv";
 dotenv.config();
 
+/**
+  Listens to main live blockchain and gets current block number
+  Used to test connectivity to Geth node 8545
+*/
+
 // Extract Provider
-const PROVIDER_SIM = "http://127.0.0.1:" + process.env.SIMULATION_PORT!;
+const PORT = process.env.SIMULATION_PORT!;
+const PROVIDER_SIM = "http://127.0.0.1:8545";
 
 // Main function
 async function main() {

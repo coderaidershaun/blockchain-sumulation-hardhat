@@ -2,6 +2,12 @@ import { exec } from "child_process";
 import dotenv from "dotenv";
 dotenv.config();
 
+/**
+  Forks the mainnet on a separate port (8700) for then testing transactions against
+  Useful for creating a simulated blockchain for testing transactions against in addition
+  to being able to call debug_traceTransaction if you want to see why a given transaction failed
+*/
+
 // Extract Provider
 const PORT = process.env.SIMULATION_PORT!;
 const PROVIDER_SIM = "http://127.0.0.1:" + PORT;
